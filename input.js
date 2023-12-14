@@ -1,6 +1,6 @@
 let connection;
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
 
   const stdin = process.stdin;
@@ -8,7 +8,7 @@ const setupInput = function (conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  const handleUserInput = function (input) {
+  const handleUserInput = function(input) {
     input = input.toLowerCase();
 
     if (input === '\u0003') {
@@ -36,4 +36,4 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-module.exports = { setupInput }
+module.exports = { setupInput };
